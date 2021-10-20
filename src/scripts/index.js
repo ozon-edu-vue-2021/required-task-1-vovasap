@@ -165,7 +165,7 @@ const togglePopup = function() {
  */
 const actionHandler = function(evt) {
   evt.preventDefault();
-  const nextPage = evt.currentTarget.dataset.page;
+  const nextPage = Number(evt.currentTarget.dataset.page);
   evt.currentTarget.dataset.page = nextPage + 1;
 
   if (nextPage > MAX_PAGE_IAMGES) {
