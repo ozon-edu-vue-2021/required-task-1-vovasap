@@ -94,7 +94,7 @@ a:nth-child(3n) {
 }
 
 .preview {
-    display: flex;
+  display: flex;
 }
 
 /* Popup style */
