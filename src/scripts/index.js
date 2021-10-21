@@ -30,6 +30,7 @@ const initialState = function() {
  */
 const getPictures = function(page = 1, limit = 10) {
   showLoader();
+  action.disabled = true;
   fetch(`https://picsum.photos/v2/list?page=${page};limit=${limit}`)
     .then(function(response) {
       return response.json();
@@ -39,6 +40,7 @@ const getPictures = function(page = 1, limit = 10) {
     })
     .finally(function() {
       hideLoader();
+      action.disabled = false;
     });
 };
 
