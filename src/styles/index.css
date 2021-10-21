@@ -51,7 +51,16 @@ main {
 }
 
 /* Action style */
-.action {
+.close {
+  width: fit-content;
+  padding: 20px 20px 0 0;
+  place-self: flex-end;
+  font-size: 25px;
+  background-color: transparent;
+  font-weight: bolder;
+}
+
+.fetch {
   width: fit-content;
   background-color: #66bb6a;
   font-size: 16px;
@@ -59,8 +68,7 @@ main {
   border-radius: 6px;
   margin: 10px 0;
 }
-
-.action:hover {
+.fetch:hover {
   background-color: #4caf50;
 }
 
@@ -126,12 +134,13 @@ figcaption {
   position: fixed;
   visibility: hidden;
   display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background-color: rgba(33, 33, 33, 0.5);
-  z-index: -1;
+  z-index: 5;
 }
 
 .popup.open {
