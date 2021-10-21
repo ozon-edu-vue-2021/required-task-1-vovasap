@@ -89,18 +89,6 @@ a {
   width: 100%;
 }
 
-a:nth-child(n) {
-  background-color: #efebe9;
-}
-
-a:nth-child(2n) {
-  background-color: #d7ccc8;
-}
-
-a:nth-child(3n) {
-  background-color: #bcaaa4;
-}
-
 .preview {
   display: flex;
 }

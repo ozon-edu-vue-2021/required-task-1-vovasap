@@ -124,7 +124,6 @@ const renderPictures = function(list) {
   });
 
   container.appendChild(fragment);
-  hideLoader();
 };
 
 /**
@@ -146,7 +145,6 @@ const renderPopupPicture = function(picture) {
 
   popupContainer.innerHTML = "";
   popupContainer.appendChild(clone);
-  hideLoader();
   togglePopup();
 };
 
