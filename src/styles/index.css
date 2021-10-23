@@ -52,7 +52,6 @@ main {
 
 /* Action style */
 .close {
-  width: fit-content;
   padding: 20px 20px 0 0;
   place-self: flex-end;
   font-size: 25px;
