@@ -40,7 +40,11 @@ const getPictures = function(page = 1, limit = 10) {
     })
     .finally(function() {
       hideLoader();
-      action.disabled = false;
+      if (Number(action.dataset.page) - 1 === MAX_PAGE_IAMGES) {
+        console.warn(`WARN: The maximum pages is shown - ${MAX_PAGE_IAMGES}`);
+      } else {
+        action.disabled = false;
+      }
     });
 };
 
@@ -168,14 +172,7 @@ const actionHandler = function(evt) {
   const nextPage = Number(evt.currentTarget.dataset.page);
   evt.currentTarget.dataset.page = nextPage + 1;
 
-  if (nextPage > MAX_PAGE_IAMGES) {
-    console.warn(
-      `WARN: You are trying to call a page that exceeds ${MAX_PAGE_IAMGES}`
-    );
-    action.disabled = true;
-  } else {
-    getPictures(nextPage);
-  }
+  getPictures(nextPage);
 };
 
 /**
